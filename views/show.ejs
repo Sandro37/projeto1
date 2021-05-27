@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD</title>
+</head>
+<body>
+    <h1>IDEIAS PARA MELHORAR A CIDADE</h1>   
+        <table border="1">
+            <thead>            
+                <tr id="titulo">
+                    <td>CIDADE</td>
+                    <td>MELHORIA</td>
+                    <td>AÇÕES</td>
+                </tr>
+            </thead>
+        <tbody>
+            <% data.forEach(function(details) { %>
+                <tr>
+                    <td><%= details.cidade %></td>
+                    <td><%= details.melhoria %></td>
+                    <td><a id="editar" href="/edit/<%= details.idCidade %>">EDITAR</a> - <a id="deletar" href="/delete/<%= details.idCidade %>">DELETAR</a></td>
+                </tr>
+                <% }) %>
+            </tbody>
+            <button><a href="/inserirCidade">+</a></button>
+        </table>
+    </body>
+</html>
+<style>
+    body{
+		background-color: bisque;
+	}
+
+    table{
+        text-align: center;
+        border: 2px solid;
+        border-radius: 10%;
+        background-color:  white;
+        max-width: 1000px;
+        width: 100%;
+        padding: 50px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-spacing: 0.5rem;
+    }
+    td, th {
+        border: 1px solid #999;
+        padding: 0.5rem;
+        text-align: center;
+    }
+    tr#titulo{
+      background-color: rgb(0, 0, 0);  
+      color: white;
+    }
+
+    h1{
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+    }
+
+    button{
+        font-size: 50px;
+		border: 2px solid rgb(255, 255, 255);
+  		border-radius: 50px 20px;
+		width: 100px;
+		height: 100px;
+    }
+
+    a:link 
+    { 
+        text-decoration:none; 
+    }
+    a {
+        color: #000;
+    }
+
+    a:visited {
+        color: rgb(0, 0, 0);
+    }
+
+    a:hover {
+        color: #999;
+    }
+
+    a:active {
+        color: #333;
+    }
+
+</style>

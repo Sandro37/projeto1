@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    <form action="/login/verificar" method="post">
+        <div id="login">
+            <h1>LOGIN</h1>
+        </div>
+        <hr>
+        <div id="email">
+            <input type="text" name="email" placeholder="EMAIL">
+        </div>
+        <div id="senha">
+            <input type="text" name="senha" placeholder="SENHA">
+        </div>
+        <div id="butao">
+            <button  type="submit">LOGAR</button>
+        </div>
+        <div>
+            <a href="/">Voltar</a>
+        </div>
+    </form>
+</body>
+</html>
+<style>
+    body{
+        background-color: rgb(145, 145, 145);
+    }
+    form{
+        text-align: center;
+        border: 2px solid;
+        border-radius: 10%;
+        background-color:  white;
+        max-width: 500px;
+        width: 70%;
+        padding: 20px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        
+    }
+    hr{
+        width: 20%;
+    }
+    div{
+        padding-top: 10px;
+    }
+</style>

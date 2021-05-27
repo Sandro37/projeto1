@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDITAR</title>
+</head>
+<body>
+    <h1>IDEIAS PARA MELHORAR A CIDADE</h1> 
+    <button id="voltar" ><a href="/show"><</a></button>
+    <% data.forEach(function(details) { %>
+        <form action="/edit/<%= details.idCidade %>" method="POST">
+            <h2>Editar Registro</h2>
+            <input type="text" value="<%= details.cidade %>" name="cidade">
+            <input type="text" value="<%= details.melhoria %>" name="melhoria">
+            <button id="editar" type="submit">SALVAR EDIÇÃO</button>
+        </form>
+        <% }) %>
+</body>
+</html>
+<style>
+	form{
+		text-align: center;
+		border: 2px solid;
+		border-radius: 10%;
+		background-color:  white;
+		max-width: 500px;
+		width: 70%;
+		padding: 20px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	ul {
+		list-style: none;
+	}
+	input{
+		text-align: center;
+    	width: 90%;
+        margin-top: 10px;
+	}	
+	body{
+		background-color: bisque;
+	}
+    button#editar{
+        margin-top: 10px;
+        width: 91.9%;
+    }
+
+	h1#TITULO{
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+    }
+
+    button#voltar{
+        font-size: 50px;
+		border: 2px solid rgb(255, 255, 255);
+  		border-radius: 50px 20px;
+		width: 100px;
+		height: 100px;
+    }
+
+    h1{
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+    }
+    a:link 
+    { 
+        text-decoration:none; 
+    }
+    a {
+        color: #000;
+    }
+
+    a:visited {
+        color: rgb(0, 0, 0);
+    }
+
+    a:hover {
+        color: #999;
+    }
+
+    a:active {
+        color: #333;
+    }
+</style>

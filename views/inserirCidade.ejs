@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INSERIR CIDADE</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+	<h1 id="TITULO">IDEIAS PARA MELHORAR A CIDADE</h1>   
+	<button id="voltar"><a href="/show"><</a></button>
+	<tbody>
+		<form action="/show" method="POST">
+			<h1>CADASTRAR PROBLEMA</h1>
+			<ul>
+				<li>
+					<label for="txtCidade">Cidade:</label>
+					<input type="text" id="txtCidade" name="txtCidade"/>
+				</li>
+				<li>
+					<label for="txtMelhoria">Melhoria:</label>
+					<input type="text" id="txtMelhoria" name="txtMelhoria"/>
+				</li>
+				
+				<li>
+					<button id="salvar" type="submit">CLIQUE AQUI</button>
+				</li>
+			</ul>
+		</tbody>
+</body>
+</html>
+<style>
+	form{
+		text-align: center;
+		border: 2px solid;
+		border-radius: 10%;
+		background-color:  white;
+		max-width: 500px;
+		width: 70%;
+		padding: 20px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	ul {
+		list-style: none;
+	}
+	input{
+		text-align: center;
+    	width: 90%;
+	}	
+
+	button#salvar{
+		margin-top: 10px;
+		width: 91.9%;
+
+	}
+
+	button#voltar{
+		font-size: 50px;
+		border: 2px solid rgb(255, 255, 255);
+  		border-radius: 50px 20px;
+		width: 100px;
+		height: 100px;
+	}
+
+	body{
+		background-color: bisque;
+	}
+
+	h1#TITULO{
+        border: 1px solid black;
+        text-align: center;
+        background-color: white;
+    }
+	a:link 
+    { 
+        text-decoration:none; 
+    }
+    a {
+        color: #000;
+    }
+
+    a:visited {
+        color: rgb(0, 0, 0);
+    }
+
+    a:hover {
+        color: #999;
+    }
+
+    a:active {
+        color: #333;
+    }
+</style>
